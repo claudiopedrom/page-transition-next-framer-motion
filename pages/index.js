@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
+import { motion } from 'framer-motion'
 
 const Index = (props) => (
-  <div>
+  <motion.div exit={{ opacity: 0 }}>
     <div className="container center">
       <div className="title">
         <h1>Select a protein</h1>
@@ -22,7 +23,7 @@ const Index = (props) => (
         ))}
       </div>
     </div>
-  </div>
+  </motion.div>
 )
 
 Index.getInitialProps = async function () {
